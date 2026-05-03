@@ -11,6 +11,7 @@ frontend:
         - yarn install
     build:
       commands:
+        - export NODE_OPTIONS=--openssl-legacy-provider
         - yarn run build
   artifacts:
     baseDirectory: build
