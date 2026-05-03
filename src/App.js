@@ -13,6 +13,14 @@ const Title = styled("h1")`
   margin-bottom: 8px;
 `;
 
+const Subtitle = styled("p")`
+  text-align: center;
+  color: #74b49b;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 14px;
+`;
+
 const theme = {
   formContainer: {
     margin: 0,
@@ -68,6 +76,7 @@ function App() {
   ) : (
     <>
       <Title>Quick Notes</Title>
+      <Subtitle>Sign in or create an account to manage your notes</Subtitle>
       <Authenticator
         onStateChange={authState => {
           if (authState === "signedIn") {
